@@ -5,9 +5,9 @@ import requests
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
 # Variable 
-# Replace the <hostname> with CCS applicatio server host name
+# Replace the <hostname> with CCS application server host name
 # Replace the <port number> with the configured port number for REST API, Default Port Number : 12431
-# Replace the <user name> and <password> with valide CCS user name and password for example: UserName = domain1\\administrator, password = pass@123   
+# Replace the <user name> and <password> with valid CCS user name and password for example: UserName = domain1\\administrator, password = pass@123   
 HostName = '<hostname>'
 PortNumber = '<port number>'
 UserName = '<user name>'
@@ -24,7 +24,7 @@ def getToken():
 	responseToken = requests.request("POST", urlToken, data=payload, headers=headers, verify=False)
 	autheticationresult = responseToken.status_code
 	if (autheticationresult!=200) :
-		print("\nAuthentication Failed. Please check if the REST API is enbaled and User name and password is correct\n")
+		print("\nToken Generation Failed. Please check if the REST API is enabled and User name and password is correct\n")
 		exit()
 	tokenDict = responseToken.json()
 	token = tokenDict['access_token']
