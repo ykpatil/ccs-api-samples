@@ -39,8 +39,6 @@ requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 # Update the job details by providing the job name and Job GUID. we can get the job GUID by using search job by name API.
 payload = "{\"JobDetails\":{\"JobDescription\": \"Update Job Description\",\"JobName\": \"Test_Job\"},\"JobID\":\"2a221e47-f38a-4a6b-af20-43d650e6d56b\"}"
 bearertoken = "Bearer " + getToken()
-print("\n Bearer Token is:\n")
-print(bearertoken + "\n")
 headers = {
     'Authorization': bearertoken,
     'Content-Type': "application/json"
