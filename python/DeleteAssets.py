@@ -13,11 +13,6 @@ PortNumber = '<port number>'
 UserName = '<user name>'
 Password = '<password>'
 
-HostName = 'CCSPUBAT'
-PortNumber = '12431'
-UserName = 'Qaautomation\\administrator'
-Password = 'Pass@1234'
-
 # Function to generate CCS REST API access token
 def getToken():
 	urlToken = "https://" + HostName + ":" + PortNumber + "/ccs/api/v1/oauth/tokens"
